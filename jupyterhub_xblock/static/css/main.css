@@ -1,0 +1,25 @@
+body {
+    background-image: url(static/img/jupyterhub.jpg);
+    background-color: darkgrey;
+}
+
+a.jupyterhub-button {
+    display: block;
+    background: #f37524;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white !important;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.3s;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.jupyterhub-button:hover {
+    opacity: 0.75;
+}
