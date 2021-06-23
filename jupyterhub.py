@@ -34,22 +34,23 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
         default="Start JupyterHub"
     )
 
-    description = String(
-        help="Optional description",
+    descriptions = String(
+        help="Optional descriptions",
         scope=Scope.content,
-        display_name="description",
+        display_name="descriptions",
         default="",
         multiline_editor='html',
     )
 
     jupyterhub_url = String(
-        help="Jupyterhub url",
-        display_name="Notebook URL",
+        help="Jupyterhub URL",
+        display_name="Jupyterhub URL",
         scope=Scope.content,
-        default="{{ JUPYTER_HOST }}"
+         ############### Jupyterhub URL ###############
+        default=" Replace your Jupyterhub URL here ! "
     )
 
-    editable_fields = ('display_name', 'btn_text', 'jupyterhub_url', 'description')
+    editable_fields = ('display_name', 'btn_text', 'jupyterhub_url', 'descriptions')
 
     def resource_string(self, path):
         
@@ -63,16 +64,16 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
             validation.add(
                 ValidationMessage(
                     ValidationMessage.ERROR, 
-                    u" 'http://' or 'https://'"))
+                    u" The URL begins with 'http://' or 'https://'"))
 
 
     def student_view(self, context=None):
         loader = ResourceLoader('jupyterhub_xblock')
-        jupyterhub_url = self._jupyterhub_url(self.jupyterhub_url)
+        jupyterhub_url = self.main_jupyterhub_url(self.jupyterhub_url)
         context = dict(
             main_url=jupyterhub_url,
             btn_text=self.btn_text,
-            description=self.description,
+            descriptions=self.descriptions,
         )
                         
         template = loader.render_django_template(
@@ -83,9 +84,9 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
         frag.add_css(self.resource_string('static/css/main.css'))
         return frag
 
-    def _jupyterhub_url(self, main_url):
-        
-        main_url = '{% if ENABLE_HTTPS %}https{% else %}http{% endif %}://{{ JUPYTER_HOST }}'
+    def main_jupyterhub_url(self, main_url):
+        ############### Jupyterhub URL ###############
+        main_url = " https://jupyter.zalanger.xyz "
        
         return main_url
 
