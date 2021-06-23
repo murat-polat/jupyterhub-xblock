@@ -22,7 +22,7 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
    
 
     display_name = String(
-        display_name="Name", default="Jupyterhub XBlock",
+        display_name="Name", default="Jupyterhub",
         scope=Scope.settings,
         help="XBlock name"
     )
@@ -68,7 +68,7 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
 
 
     def student_view(self, context=None):
-        loader = ResourceLoader('jupyterhub_xblock')
+        loader = ResourceLoader('jupyterhub')
         jupyterhub_url = self.main_jupyterhub_url(self.jupyterhub_url)
         context = dict(
             main_url=jupyterhub_url,

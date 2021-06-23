@@ -16,12 +16,12 @@ def package_data(pkg, roots):
 
 
 setup(
-    name='jupyterhub_xblock',
+    name='jupyterhub',
     version='1.0',
-    description='Jupyterhub XBlock',
+    description='Jupyterhub',
     license='AGPL v3',
     packages=[
-        'jupyterhub_xblock',
+        'jupyterhub',
     ],
     install_requires=[
         'XBlock',
@@ -29,8 +29,8 @@ setup(
     ],
     entry_points={
         'xblock.v1': [
-            'jupyterhub_xblock = jupyterhub_xblock:JupyterhubXBlock',
+            'jupyterhub = jupyterhub:JupyterhubXBlock',
         ]
     },
-    package_data=package_data("jupyterhub_xblock", ["static"]),
+    package_data=package_data("jupyterhub", ["static"]),
 )
