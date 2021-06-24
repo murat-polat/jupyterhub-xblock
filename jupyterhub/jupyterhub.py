@@ -34,13 +34,7 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
         default="Start JupyterHub"
     )
 
-    descriptions = String(
-        help="Optional descriptions",
-        scope=Scope.content,
-        display_name="descriptions",
-        default="",
-        multiline_editor='html',
-    )
+  
 
     jupyterhub_url = String(
         help="Jupyterhub URL",
@@ -50,7 +44,7 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
         default=" Replace your Jupyterhub URL here ! "
     )
 
-    editable_fields = ('display_name', 'btn_text', 'jupyterhub_url', 'descriptions')
+    editable_fields = ('display_name', 'btn_text', 'jupyterhub_url')
 
     def resource_string(self, path):
         
@@ -64,17 +58,16 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
             validation.add(
                 ValidationMessage(
                     ValidationMessage.ERROR, 
-                    u" The URL begins with 'http://' or 'https://'"))
+                    u" Please check your JupyterHub URL, and try it again !"))
 
 
     def student_view(self, context=None):
         loader = ResourceLoader('jupyterhub')
-        jupyterhub_url = self.main_jupyterhub_url(self.jupyterhub_url)
+        jupyterhub_url = self.jupyterhub_url
         context = dict(
             main_url=jupyterhub_url,
             btn_text=self.btn_text,
-            descriptions=self.descriptions,
-        )
+             )
                         
         template = loader.render_django_template(
             'static/html/index.html', context=context)
@@ -86,7 +79,7 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
 
     def main_jupyterhub_url(self, main_url):
         ############### Jupyterhub URL ###############
-        main_url = " https://jupyter.zalanger.xyz "
+        main_url = self.main_url
        
         return main_url
 
