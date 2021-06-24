@@ -1,13 +1,12 @@
-body {
-    background-image: url(static/img/jupyterhub.jpg);
-    background-color: darkgrey;
+#jupyterhub {
+    background-color: rgb(224, 213, 231);
 }
 
 a.jupyterhub-button {
     display: block;
     background: #f37524;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 20px;
     color: white !important;
     font-size: 20px;
     font-weight: 600;
@@ -15,7 +14,7 @@ a.jupyterhub-button {
     margin: 20px;
     text-align: center;
     transition: 0.3s;
-    width: 50%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
 }
