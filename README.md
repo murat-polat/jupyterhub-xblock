@@ -34,4 +34,4 @@ Rebuild of openedx takes same time (apx. 17 minute)
 That's it :)
 
 
-![](/src/jupyterhub.gif)
+![](/src/jupyterhub_studio.jpg)
