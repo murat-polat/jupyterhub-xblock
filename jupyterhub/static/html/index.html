@@ -1,12 +1,18 @@
 <div id="jupyterhub">
-  <!-- <div class="jupyterhub-container">
+  <div class="jupyterhub-container">
     <a class="jupyterhub-button" href="{{ main_url }}" target="_blank"> <span><i class="fa fa-rocket"></i></span> {{ btn_text }}</a>
-  </div> -->
+  </div>
 
-  <div class="container">
-    <iframe src="{{ main_url }}"   frameborder="0"  height="500" scrolling="no"
-    width= "100%"></iframe>  
-    
-    </div>
+  <div class="jupyterLab-container">
+    <a class="jupyterLab-button" href="{{ jupyterLab_url }}" target="_blank"> <span><i class="fa fa-flask"></i></span> Start JupyterLab in new tab</a>
+  </div>
+ 
+
+    <div class="container">
+      <iframe src="{{ notebook_url }}"   frameborder="0"  height="800" 
+      width= "100%"></iframe>  
+      
+      </div> 
+
 </div>
 

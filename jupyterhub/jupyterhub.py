@@ -31,7 +31,7 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
         help="Button Text",
         scope=Scope.content,
         display_name="Button Text",
-        default="Start JupyterHub"
+        default="Start JupyterHub in new tab"
     )
 
   
@@ -41,10 +41,26 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
         display_name="Jupyterhub URL",
         scope=Scope.content,
          ############### Jupyterhub URL ###############
-        default=" Replace your Jupyterhub URL here ! "
+        default= "{{main_url}}"
     )
 
-    editable_fields = ('display_name', 'btn_text', 'jupyterhub_url')
+    notebook_url = String(
+        help="JupyterNotebook URL (*.ipynb)",
+        display_name="JupyterNotebook URL",
+        scope=Scope.content,
+         ############### Notebook URL(*.ipynb) ###############
+        default="{{main_url}}/user/student/notebooks/demo.ipynb "
+    )
+
+    jupyterLab_url = String(
+        help="JupyterLab URL",
+        display_name="JupyterLab URL",
+        scope=Scope.content,
+         ############### Notebook URL(*.ipynb) ###############
+        default="{{main_url}}/user/hub/lab "
+    )
+
+    editable_fields = ('display_name', 'btn_text', 'jupyterhub_url', 'notebook_url', 'jupyterLab_url')
 
     def resource_string(self, path):
         
@@ -67,6 +83,8 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
         context = dict(
             main_url=jupyterhub_url,
             btn_text=self.btn_text,
+            notebook_url=self.notebook_url,
+            jupyterLab_url=self.jupyterLab_url
              )
                         
         template = loader.render_django_template(
@@ -82,6 +100,15 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
         main_url = self.main_url
        
         return main_url
+
+    def main_notebook_url(self,notebook_url):
+        notebook_url = self.notebook_url
+        return notebook_url
+
+    
+    def main_jupyterLab_url(self,jupyterLab_url):
+        jupyterLab_url = self.jupyterLab_url
+        return jupyterLab_url
 
     
     @staticmethod

@@ -22,3 +22,24 @@ a.jupyterhub-button {
 a.jupyterhub-button:hover {
     opacity: 0.75;
 }
+
+a.jupyterLab-button {
+    display: block;
+    background: #5b24f3;
+    text-decoration: none;
+    border-radius: 20px;
+    color: white !important;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.3s;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.jupyterLab-button:hover {
+    opacity: 0.75;
+}
