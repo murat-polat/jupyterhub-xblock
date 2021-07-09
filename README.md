@@ -50,3 +50,34 @@ Students can change, edit, share, rename. It may be a good idea to save as a sep
 
 ### User administration:
 
+Start new browser and login as a "teacher" which is administrator of JupyterHub/JupyterLab Password is: 'soloadmin'.
+Click to 'Control Panel' => 'Admin'
+
+![](/src/adminPanel.jpg)
+
+Here you can add/delete new user, admin, start and stop server. But for changing password or assigning a password for new users, you must go in the contaniner. To do that:
+
+`$  docker exec -it tutor_local_jupyter_1 bash`
+
+`$ passwd teacher` and give new password for this admin user
+
+![](/src/changePass.jpg)
+
+
+
+#### For developers:
+
+This XBlock uses default PAM Authenticator(https://jupyterhub.readthedocs.io/en/stable/reference/authenticators.html#the-default-pam-authenticator). That's mean  basic linux/Unix user administartions `$ adduser <user_name>`. If user is system user in docker container, will be JupyterHub and JupyterLab user also. 
+First to user(student, and teacher) comes from the Dockerfile(https://github.com/murat-polat/tutor-contrib-jupyter/blob/c957673a40ed4f66b6c2c67794b91213eb7e50ff/tutorjupyter/templates/jupyter/build/jupyter/Dockerfile#L45) and 
+
+the "jupyterhub_config.py" (https://github.com/murat-polat/tutor-contrib-jupyter/blob/master/tutorjupyter/templates/jupyter/build/jupyter/jupyterhub_config.py) you can change, or add more features to the these files. Feel free fork this repository and any idea or PR welcome :)
+
+### JupyterLab:
+
+JupyterLab is great advanced tools for everyone, for more information please visit https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
+
+To start JupyterLab just click the " Start JupyterLab in new tab " Now all lab ready for every Hub users.
+
+![](/src/JupyterLab.jpg)
+
+Now you can write your entyre course with Jupyter tools :)
