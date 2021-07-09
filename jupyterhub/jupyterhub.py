@@ -56,7 +56,7 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
         help="JupyterLab URL",
         display_name="JupyterLab URL",
         scope=Scope.content,
-         ############### Notebook URL(*.ipynb) ###############
+         ############### jupyterLab URL ###############
         default="{{main_url}}/user/hub/lab "
     )
 

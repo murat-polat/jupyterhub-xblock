@@ -41,7 +41,7 @@ Jupyterhub XBlock comes with to main users " student (password: solo) " and " te
 
 ![](/src/demoNotebook.jpg)
 
- Copy the URL of your notebook and paste in " Edit=> JupyterNotebook URL" save and refreh your page. Now your notebook is ready to publish.
+ Copy the URL of your notebook and paste in " Edit=> JupyterNotebook URL" save and refresh your page. Now your notebook is ready to publish.
 
 
 ![](/src/XblockOverview.jpg)
