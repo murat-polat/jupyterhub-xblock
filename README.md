@@ -81,3 +81,5 @@ To start JupyterLab just click the " Start JupyterLab in new tab " Now all lab r
 ![](/src/JupyterLab.jpg)
 
 Now you can write your entire course with Jupyter tools :)
+
+![](/src/jupyterhub2.gif)
