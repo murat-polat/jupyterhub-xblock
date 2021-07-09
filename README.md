@@ -29,19 +29,24 @@ Rebuild of openedx takes same time (apx. 20 minute)
 
 Jupyterhub XBlock comes with to main users " student (password: solo) " and " teacher (password: soloadmin) ". You can change password and create mulitable users and administrators, which will be explained soon.
 
-### Create Notebook users:
-
-
-
 - login to studio as a staff or superuser
 - Create a course, than settings=>advanced settings=> Advanced Module List add  `"jupyterhub"` and save
 
 ![](/src/advanced_module.jpg)
-- Now you can use JupyterHub as a Unit, for every type of course. But first, you need to edit your JupyterHub (Name, ButtonText, and your JupyterHub URL, JupyterNotebook URL(you will create this later), JupyterLab URL )
+- Now you can use JupyterHub as a Unit, for every type of course. But first, you need to edit your JupyterHub (Name, ButtonText, JupyterHub URL, JupyterNotebook URL(you will create this later) and JupyterLab URL )
 
 ![](/src/edit_studio.jpg)
-- You need to create
+
+- You need to create a notebook for students view in your course.To do that click to " `Start JupyterHub in new tab`" login as " student " password is "solo". Then New => Python3(ipykernel). dobbel click to "Untitled" and rename it whatever you want.
+
+![](/src/demoNotebook.jpg)
+
+ Copy the URL of your notebook and paste in " Edit=> JupyterNotebook URL" save and refreh your page. Now your notebook is ready to publish.
 
 
 ![](/src/XblockOverview.jpg)
+
+Students can change, edit, share, rename. It may be a good idea to save as a separate notebook, before they start to change it. For eksempel save as "user2_test.ipynb". Doesn't matter all file be located in same folder.
+
+### User administration:
 
