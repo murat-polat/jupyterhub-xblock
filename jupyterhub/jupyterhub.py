@@ -41,15 +41,15 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
         display_name="Jupyterhub URL",
         scope=Scope.content,
          ############### Jupyterhub URL ###############
-        default= "{{main_url}}"
+        default= "{{JUPYTER_HOST}}"
     )
 
     notebook_url = String(
-        help="JupyterNotebook URL (*.ipynb)",
-        display_name="JupyterNotebook URL",
+        help="example: https://jupyter.yourdomain.com/user/hub/lab",
+        display_name="JupyterLab URL",
         scope=Scope.content,
-         ############### Notebook URL(*.ipynb) ###############
-        default="{{main_url}}/user/student/notebooks/demo.ipynb "
+         ############### Inline view, Studio and learner view ###############
+        default="{{JUPYTER_HOST}}/user/hub/lab "
     )
 
     jupyterLab_url = String(
@@ -57,7 +57,7 @@ class JupyterhubXBlock(XBlock, StudioEditableXBlockMixin):
         display_name="JupyterLab URL",
         scope=Scope.content,
          ############### jupyterLab URL ###############
-        default="{{main_url}}/user/hub/lab "
+        default="{{JUPYTER_HOST}}/user/hub/lab "
     )
 
     editable_fields = ('display_name', 'btn_text', 'jupyterhub_url', 'notebook_url', 'jupyterLab_url')

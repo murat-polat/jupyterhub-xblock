@@ -74,7 +74,7 @@ the "jupyterhub_config.py" (https://github.com/murat-polat/tutor-contrib-jupyter
 
 ### JupyterLab:
 
-JupyterLab is great advanced tools for everyone, for more information please visit https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
+JupyterLab is next-generations, great advanced tools for everyone. Not just a notebook,that comes with text editor, console, terminal and much more. For more information please visit https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
 
 To start JupyterLab just click the " Start JupyterLab in new tab " Now all lab ready for every Hub users.
 
