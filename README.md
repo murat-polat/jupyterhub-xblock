@@ -76,9 +76,10 @@ For courses " Student " is common user, but all users can use their own server, 
 
 ### Video chat with Jitsi (WebRTC):
 Login which user do you want, give name to your VideoChat rom, then click to "JOIN" button.
+
 ![](/src/jitsi.png)
 
-Ask to other paticipants to join your meeting. Link will be same lab, and same rom.
+Ask the other paticipants to join your meeting. Link will be same lab, and same rom.
 (e.g https://jupyter.yourdomain/user/edx1/lab) login Join the same rom(TestRom)
 
 ![](/src/jitsi2.png)
@@ -94,15 +95,7 @@ First to user(student, and teacher) comes from the Dockerfile(https://github.com
 
 the "jupyterhub_config.py" (https://github.com/murat-polat/tutor-contrib-jupyter/blob/master/tutorjupyter/templates/jupyter/build/jupyter/jupyterhub_config.py) you can change, or add more features to the these files. Feel free fork this repository and any idea or PR welcome :)
 
-### JupyterLab:
 
-JupyterLab is next-generations, great advanced tools for everyone. Not just a notebook,that comes with text editor, console, terminal and much more. For more information please visit https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
-
-To start JupyterLab just click the " Start JupyterLab in new tab " Now all lab ready for every Hub users.
-
-![](/src/JupyterLab.jpg)
-
-Now you can write your entire course with Jupyter tools :)
 
 
 [![](/src/youtube.jpg)](https://www.youtube.com/watch?v=f-tsGIxYq7c)
