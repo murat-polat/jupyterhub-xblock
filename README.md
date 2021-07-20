@@ -41,7 +41,7 @@ Jupyterhub XBlock comes with to main users " student (password: solo) " and " te
 
 ### JupyterLab:
 
-JupyterLab is next-generations, great advanced tools for everyone. Not just a notebook,that comes with text editor, console, terminal and much more. For more information please visit https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
+JupyterLab is next-generations, great advanced tools for everyone. Not just a notebook,that comes with text editor, console, terminal, Jitsi-Meet and much more. For more information please visit https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
 
 To start JupyterLab just click the " Start JupyterLab in new tab " Now all lab ready for every Hub users.
 
@@ -50,16 +50,15 @@ Now you can write your entire course with Jupyter tools :)
 
 ![](/src/Lab.png)
 
- Copy the URL of your notebook and paste in " Edit=> JupyterNotebook URL" save and refresh your page. Now your notebook is ready to publish.
+ Copy the URL of your notebook and paste in " Edit=> JupyterHub or Lab URL" save and refresh your page. Now your notebook is ready to publish.
 
 
 ![](/src/XblockOverview.jpg)
 
-Students can change, edit, share, rename. It may be a good idea to save as a separate notebook, before they start to change it. For eksempel save as "user2_test.ipynb". Doesn't matter all file be located in same folder.
+Students can change, edit, share, rename common users notebooks, or their own notebooks. For courses " Student " is common user, but all users can use their own server, doesn't matter. Teacher should be uses for user administrations. Because basic user can not see or edit admin(teacher) files :)
 
 ### User administration:
 
-### Create multiple Notebook users (Spawners)
 
 Login as a teacher(password: soloadmin) => clik to Control Panel then => Admin
 
