@@ -1,7 +1,7 @@
 # JupyterHub-XBlock
 Jupyterhub, JupyterNotebook, and JupyterLab XBlock all comes with Tutor Jupyter plugin..
 
-![](/src/lab.png)
+![](/src/Lab.png)
 
 #### For installation and documentation please click the link below
 
